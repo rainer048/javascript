@@ -1,0 +1,37 @@
+// выводит чётные
+for( var i=0 ; i<=10; i++)
+{
+	if (i%2)==0{	
+	alert(i);}
+}
+
+
+
+// был for, стал while
+//	for (var i = 0; i < 3; i++) {
+//  	alert( "номер " + i + "!" );
+//	}
+
+var i=0;
+while(i<3)
+{
+	alert ("номер" +i+'!');
+	i++;
+}
+
+//
+var i=0;
+while(i<=100)
+{
+ var mass = prompt('ВВедите число больше 100', "");
+}
+//
+
+Eazy:
+  for (var i = 2; i <= 10; i++) {
+
+    for (var j = 2; j < i; j++) {
+      if (i % j == 0) continue Eazy;
+    }
+
+    alert( i ); 
