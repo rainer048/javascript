@@ -11,6 +11,7 @@ case 1:
             }
             return result;
         }
+        
         alert(sumTo(many));
     }
     break;
@@ -26,11 +27,13 @@ case 2:
         alert(sumTo(many));
         break;
     }
+
 case 3:
     {
         function sumTo(n) {
             return n * (n + 1) / 2;
         }
+        
         alert(sumTo(many));
     }
 
