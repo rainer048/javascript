@@ -1,0 +1,1 @@
+goods[goods.length] = 'Компьютер';
