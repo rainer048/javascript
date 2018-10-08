@@ -1,26 +1,24 @@
-var arr = [];
-for (var i = 2; i < 100; i++) {
-    arr[i] = true
+var n= +prompt(' до какого числа ищем все простые числа?' , '');
+function eratosthenes(num){
+	var arr = [];
+
+	for (var i = 2; i <= num; i++) arr.push(i);
+
+	for (var a = 1; a < arr.length; a++) {
+		var one = arr[a-1];
+		for (var b = a; b < arr.length; b++) {
+			if(arr[b] % one == 0) delete arr[b];
+		}
+	}
+
+	var sumPrimitiveNum = 0;
+
+	for (var e = 0; e < arr.length; e++) {
+		if(arr[e] !== undefined) sumPrimitiveNum +=arr[e];
+	}
+	alert(arr);
+	return sumPrimitiveNum;
 }
-var p = 2;
-do {
-    for (i = 2 * p; i < 100; i += p) {
-        arr[i] = false;
-    }
+console.log(eratosthenes(n));
 
-    // шаг 4
-    for (i = p + 1; i < 100; i++) {
-        if (arr[i]) break;
-    }
-
-    p = i;
-} while (p * p < 100); // шаг 5
-
-var sum = 0;
-for (i = 0; i < arr.length; i++) {
-    if (arr[i]) {
-        sum += i;
-    }
-}
-
-alert( sum );
+alert (eratosthenes(n));
