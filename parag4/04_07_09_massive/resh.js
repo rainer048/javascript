@@ -7,7 +7,7 @@ function eratosthenes(num){
 	for (var a = 1; a < arr.length; a++) {
 		var one = arr[a-1];
 		for (var b = a; b < arr.length; b++) {
-			if(arr[b] % one == 0) delete arr[b];
+			if(arr[b] % one == 0) arr.splice(b,1);
 		}
 	}
 
@@ -19,6 +19,4 @@ function eratosthenes(num){
 	alert(arr);
 	return sumPrimitiveNum;
 }
-console.log(eratosthenes(n));
-
 alert (eratosthenes(n));
